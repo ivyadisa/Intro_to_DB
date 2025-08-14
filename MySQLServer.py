@@ -4,14 +4,13 @@ Creates the database alx_book_store in MySQL.
 """
 
 import mysql.connector
-from mysql.connector import Error
 
 try:
     # Connect to MySQL server (update credentials)
     connection = mysql.connector.connect(
         host='localhost',
-        user='root',        # change to your MySQL username
-        password='root'     # change to your MySQL password
+        user='root',        # Change to your MySQL username
+        password='Adisa@2718'     # Change to your MySQL password
     )
 
     if connection.is_connected():
@@ -19,7 +18,7 @@ try:
         cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         print("Database 'alx_book_store' created successfully!")
 
-except Error as e:
+except mysql.connector.Error as e:
     print(f"Error while connecting to MySQL: {e}")
 
 finally:
